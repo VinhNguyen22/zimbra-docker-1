@@ -3,18 +3,18 @@
 # Based on Ubuntu 16.04
 # Created by Jorge de la Cruz
 #################################################################
-FROM ubuntu:16.04
-MAINTAINER Jorge de la Cruz <jorgedlcruz@gmail.com>
+FROM ubuntu:18.04
+#MAINTAINER Jorge de la Cruz <jorgedlcruz@gmail.com>
 
 RUN echo "resolvconf resolvconf/linkify-resolvconf boolean false" | debconf-set-selections
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install \
   wget \
   dialog \
-  openssh-client \
+#  openssh-client \
   software-properties-common \
-  dnsmasq \
-  dnsutils \
+#  dnsmasq \
+#  dnsutils \
   net-tools \
   sudo \
   rsyslog \
